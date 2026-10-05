@@ -20,7 +20,7 @@ app.disable('x-powered-by');
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 
-const allowedOrigins = new Set([env.CLIENT_URL, 'http://localhost:5173', 'http://127.0.0.1:5173']);
+const allowedOrigins = new Set([env.CLIENT_URL, 'https://event-sphere-eproject.vercel.app', 'http://localhost:5173', 'http://127.0.0.1:5173']);
 app.use(
   cors({
     origin(origin, callback) {
